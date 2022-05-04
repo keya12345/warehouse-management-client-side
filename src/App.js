@@ -1,11 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import About from "./componets/About/About";
 import Home from "./componets/Home/Home";
+import Footer from "./componets/Shared/Footer/Footer";
+import Header from "./componets/Shared/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Keya</h1>
-      <Home></Home>
+    <div>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+
+        <Route path="/about" element={<About></About>}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
