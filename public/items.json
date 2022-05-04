@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Television",
+        "price": "25000",
+        "description": "A television studio, also called a television production studio, is an installation room in which video productions take place.",
+        "img": "https://png.pngtree.com/element_pic/17/06/29/f9d7945fb1af5bcee9e1a95d9cc3f3da.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Modern Freezer",
+        "price": "30000",
+        "description": "A typical refrigerator manufacturing process requires the assembly of three parts, namely the exterior shell, the interior cabin and the cooling mechanism. ",
+        "img": "https://cdn4.vectorstock.com/i/1000x1000/75/43/modern-fridge-freezer-refrigerator-vector-23027543.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Microwave",
+        "price": "15000",
+        "description": "Microwaves are produced inside the oven by an electron tube called a magnetron. The microwaves are reflected within the metal interior of the oven where they are absorbed by food.",
+        "img": "https://image.shutterstock.com/image-photo/microwave-oven-260nw-180415394.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Laptop",
+        "price": "80000",
+        "description": "The vast majority of laptops on the market are manufactured by a small handful of Taiwan-based original design manufacturers (ODM), although their production bases are located mostly in mainland China.",
+        "img": "https://cdn.pixabay.com/photo/2017/08/21/15/37/laptop-2665794_960_720.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Computer",
+        "price": "70000",
+        "description": "Once in purified form, the silicon is formed into wafers, which are simply thin sheets crystalline material. Then, the CPU maker etches, or imprints, lines onto the surface of the wafer.",
+        "img": "https://image.shutterstock.com/image-photo/computer-mouse-isolated-on-white-260nw-1501408907.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Smartphone",
+        "price": "10300",
+        "description": "The Spiral 2 is Google's second prototype of a modular phone built under its Project Ara. These phones will let you mix and match hardware parts, such as cameras or screens.",
+        "img": "https://png.pngtree.com/element_our/20190602/ourmid/pngtree-hand-drawn-smartphone-illustration-image_1401996.jpg"
+    }
+]

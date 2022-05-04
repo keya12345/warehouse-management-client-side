@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Lenovo",
+        "price": "30000",
+        "description": "High quality, durability, lightweight and impeccable design are the important qualities of brand Lenovo that has helped it to achieve desired success in the computer industry.",
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "HP Corporation",
+        "price": "10000",
+        "description": "HP has earned its name and success as one of the innovative and reliable brands in the computer industry because of new features, latest designs, and ground-breaking technology.",
+        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Dell Corporation",
+        "price": "150000",
+        "description": "Dell has earned its reputation as a trusted brand as it finds itself at the top in terms of performance and innovations in electronic commerce. ",
+        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Apple Corporation",
+        "price": "180000",
+        "description": "One of the best pc brands in recent times is Apple. It was founded in the year 1976 by its co-founders Ronald Wayne, Steve Wozniak, and Steve Jobs.",
+        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Acer Corporation",
+        "price": "100000",
+        "description": "Acer is known as the best computer brand as it pays special emphasis on quality, durability, reliability, and value to its customers. It has introduced new looks .",
+        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Asus",
+        "price": "30000",
+        "description": "Asus is an electronics and computer hardware company of Taiwanese origin. This multinational corporation was founded in the year 1989",
+        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+    }
+]

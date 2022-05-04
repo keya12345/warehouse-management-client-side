@@ -1,10 +1,14 @@
 import React from "react";
-import Footer from "../Shared/Footer/Footer";
+import ComputerCollection from "../ComputerCollection/ComputerCollection";
+import Items from "../Items/Items";
+import LaptopCollection from "../LaptopCollection/LaptopCollection";
 
 const Home = () => {
   return (
     <div>
-      <Footer></Footer>
+      <Items></Items>
+      <LaptopCollection></LaptopCollection>
+      <ComputerCollection></ComputerCollection>
     </div>
   );
 };
