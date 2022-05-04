@@ -2,43 +2,43 @@
     {
         "id": 1,
         "name": "Apple",
-        "price": "300",
+        "price": "30000",
         "description": "Apple offers the best customer support to MacBook users. Besides physical stores, the company offers 24×7 Support over calls, free for a period of 90 days. ",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "img": "https://toppng.com/uploads/preview/samsung-laptop-png-11552846786mnefc8qefb.png"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "name": "Samsung",
+        "price": "10000",
+        "description": "Samsung is a huge name when it comes to smartphones, tablets, televisions, air conditioners, and refrigerators. With their service centers worldwide, it’s one of the most popular electronics brands.",
+        "img": "https://toppng.com/uploads/preview/samsung-laptop-png-11552846920ggjwoxjcy6.png"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
-        "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "name": "Microsoft Surface",
+        "price": "15000",
+        "description": "Microsoft Corporation is American based company that develops, manufactures many licensed software and hardware products. It is the largest producer of personal computers. ",
+        "img": "https://st.depositphotos.com/1000128/3686/i/950/depositphotos_36868899-stock-photo-modern-laptop.jpg"
     },
     {
         "id": 4,
-        "name": "BRAKE REPARING",
-        "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "name": "MSI",
+        "price": "180000",
+        "description": "MSI is one of the best laptop brands for gaming and is highly known for delivering the best high-end gaming laptops. MSI is considered as a leading brand in games and eSports globally. ",
+        "img": "https://static.turbosquid.com/Preview/2019/08/01__08_55_55/Samsung_Notebook7_2019_13inch_00.jpgA0E07B83-D533-4243-A5AB-9E9394E895D7Large.jpg"
     },
     {
         "id": 5,
-        "name": "WASH AND GLASSING",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "name": "Asus",
+        "price": "10200",
+        "description": "ASUS Laptop are mostly known for being affordable compared to other brands and reason behind that might be their in-house manufacturing of motherboards. ",
+        "img": "https://cdn.pixabay.com/photo/2017/08/21/15/37/laptop-2665794_960_720.jpg"
     },
     {
         "id": 6,
-        "name": "COMPLETE ANALYSIS",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "name": "Acer",
+        "price": "30000",
+        "description": "Acer is a Taiwanese computer-manufacturer with a global clientele. Acer laptops are usually best value for the money and most of the time with Acer you get what you pay for.",
+        "img": "https://png.pngtree.com/png-vector/20191026/ourmid/pngtree-laptop-icon-png-image_1871608.jpg"
     }
 ]
