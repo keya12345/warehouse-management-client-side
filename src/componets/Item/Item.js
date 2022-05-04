@@ -6,11 +6,11 @@ const Item = ({ item }) => {
     <div className="item">
       <img height={300} width={300} src={img} alt="" />
       <h1>{name}</h1>
-      <h3>Price:{price}</h3>
-      <h3>Quantity:{quantity}</h3>
-      <h3>SupplierName:{supplierName}</h3>
+      <h4>Price:{price}</h4>
+      <h4>Quantity:{quantity}</h4>
+      <h4>SupplierName:{supplierName}</h4>
       <p>Description:{description}</p>
-      <button>Update Item</button>
+      <button className="btn btn-primary">Update Item</button>
     </div>
   );
 };

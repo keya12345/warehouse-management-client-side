@@ -10,7 +10,7 @@ const Items = () => {
   }, []);
   return (
     <div>
-      <h1 className="title">Items:{items.length}</h1>
+      <h1 className="title mt-5">Warehouse Management Items</h1>
       <div className="items-container">
         {items.map((item) => (
           <Item key={item.id} item={item}></Item>

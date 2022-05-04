@@ -6,9 +6,9 @@ const SingleLaptop = ({ laptop }) => {
     <div className="single-laptop">
       <img height={300} width={300} src={img} alt="" />
       <h1>{name}</h1>
-      <h3>Price:{price}</h3>
+      <h4>Price:{price}</h4>
       <p>Description:{description}</p>
-      <button>Update Item</button>
+      <button className="btn btn-primary">Update Item</button>
     </div>
   );
 };

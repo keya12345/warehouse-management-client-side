@@ -10,7 +10,7 @@ const LaptopCollection = () => {
   }, []);
   return (
     <div>
-      <h1 className="title">Laptop Collection:{laptops.length}</h1>
+      <h1 className="title mt-5">Warehouse Management Laptop Collection</h1>
       <div className="laptopCollection-container">
         {laptops.map((laptop) => (
           <SingleLaptop key={laptop.id} laptop={laptop}></SingleLaptop>

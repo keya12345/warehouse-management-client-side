@@ -11,7 +11,7 @@ const ComputerCollection = () => {
   }, []);
   return (
     <div>
-      <h1 className="title">Computer Collection{computers.length}</h1>
+      <h1 className="title mt-5">Warehouse Management Computer Collection</h1>
       <div className="computerCollection-container">
         {computers.map((computer) => (
           <SingleComputer
