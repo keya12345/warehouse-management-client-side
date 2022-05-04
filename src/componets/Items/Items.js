@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
-
+import "./Items.css";
 const Items = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -10,10 +10,12 @@ const Items = () => {
   }, []);
   return (
     <div>
-      <h1>Items:{items.length}</h1>
-      {items.map((item) => (
-        <Item key={item.id} item={item}></Item>
-      ))}
+      <h1 className="title">Items:{items.length}</h1>
+      <div className="items-container">
+        {items.map((item) => (
+          <Item key={item.id} item={item}></Item>
+        ))}
+      </div>
     </div>
   );
 };
