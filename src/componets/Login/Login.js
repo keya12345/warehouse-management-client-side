@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -18,7 +18,7 @@ const Login = () => {
   };
   return (
     <div className="container w-50 mx-auto">
-      <h1 className="text-primary text-center mt-3">Login</h1>
+      <h1 className="text-primary text-center mt-3">LOGIN</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -48,14 +48,18 @@ const Login = () => {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
       <p>
-        Warehouse Management?{" "}
-        <span className="text-danger" onClick={navigateRegister}>
+        New account?{" "}
+        <Link
+          to="/register"
+          className="text-danger pe-auto text-decoration-none"
+          onClick={navigateRegister}
+        >
           Please Register
-        </span>
+        </Link>
       </p>
     </div>
   );
