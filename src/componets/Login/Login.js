@@ -1,19 +1,22 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
+import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
 
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
+  const location = useLocation();
 
+  let from = location.state?.from?.pathname || "/";
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   if (user) {
-    navigate("/home");
+    navigate(from, { replace: true });
   }
 
   const handleSubmit = (event) => {
@@ -38,9 +41,6 @@ const Login = () => {
             placeholder="Enter email"
             required
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -71,6 +71,7 @@ const Login = () => {
           Please Register
         </Link>
       </p>
+      <SocialLoginPage></SocialLoginPage>
     </div>
   );
 };

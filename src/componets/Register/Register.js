@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -45,9 +46,6 @@ const Register = () => {
             placeholder="Enter email"
             required
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -74,6 +72,7 @@ const Register = () => {
           Please Login
         </Link>
       </p>
+      <SocialLoginPage></SocialLoginPage>
     </div>
   );
 };
