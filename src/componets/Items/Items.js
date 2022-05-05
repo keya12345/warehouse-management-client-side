@@ -9,7 +9,7 @@ const Items = () => {
       .then((data) => setItems(data));
   }, []);
   return (
-    <div>
+    <div id="items">
       <h1 className="title mt-5">Warehouse Management Items</h1>
       <div className="items-container">
         {items.map((item) => (

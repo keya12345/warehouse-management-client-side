@@ -9,7 +9,7 @@ const LaptopCollection = () => {
       .then((data) => setLaptops(data));
   }, []);
   return (
-    <div>
+    <div id="laptopCollection">
       <h1 className="title mt-5">Warehouse Management Laptop Collection</h1>
       <div className="laptopCollection-container">
         {laptops.map((laptop) => (
