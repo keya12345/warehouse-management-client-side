@@ -8,6 +8,7 @@ import {
 import auth from "../../firebase.init";
 import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
 import { async } from "@firebase/util";
+import Loading from "../Loading/Loading";
 
 const Register = () => {
   const [terms, setTerms] = useState(false);
@@ -22,6 +23,10 @@ const Register = () => {
   const navigateLogin = () => {
     navigate("/login");
   };
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   if (user) {
     console.log("user", user);
