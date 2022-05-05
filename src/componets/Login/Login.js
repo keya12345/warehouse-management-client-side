@@ -1,6 +1,10 @@
+import { async } from "@firebase/util";
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
@@ -10,8 +14,10 @@ const Login = () => {
   const passwordRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
-
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   let from = location.state?.from?.pathname || "/";
+  let errorMassage;
+
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -19,11 +25,25 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
+  if (error) {
+    errorMassage = (
+      <div>
+        <p className="text-danger">Error: {error?.message}</p>
+      </div>
+    );
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
+  };
+
+  const forgetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    alert("Sent email");
   };
 
   const navigateRegister = (event) => {
@@ -53,14 +73,11 @@ const Login = () => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
+        <Button variant="primary w-50 mx-auto d-block" type="submit">
           Login
         </Button>
       </Form>
+      {errorMassage}
       <p>
         New account?{" "}
         <Link
@@ -69,6 +86,16 @@ const Login = () => {
           onClick={navigateRegister}
         >
           Please Register
+        </Link>
+      </p>
+      <p>
+        Forget Password:{" "}
+        <Link
+          to="/register"
+          className="text-success pe-auto text-decoration-none"
+          onClick={forgetPassword}
+        >
+          Forget Password
         </Link>
       </p>
       <SocialLoginPage></SocialLoginPage>

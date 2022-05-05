@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
@@ -6,6 +6,7 @@ import auth from "../../firebase.init";
 import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
 
 const Register = () => {
+  const [terms, setTerms] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -26,7 +27,9 @@ const Register = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    createUserWithEmailAndPassword(email, password);
+    if (terms) {
+      createUserWithEmailAndPassword(email, password);
+    }
   };
 
   return (
@@ -58,7 +61,24 @@ const Register = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <input
+          onClick={() => setTerms(!terms)}
+          type="checkbox"
+          name="terms"
+          id="terms"
+        />
+        <label
+          className={terms ? "ps-2 text-primary" : "ps-2 text-danger"}
+          htmlFot="terms"
+        >
+          Terms and Conditions
+        </label>
+
+        <Button
+          disabled={!terms}
+          variant="primary w-50 mx-auto d-block mt-2"
+          type="submit"
+        >
           Register
         </Button>
       </Form>

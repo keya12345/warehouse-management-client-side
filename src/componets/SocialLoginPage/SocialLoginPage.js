@@ -1,6 +1,6 @@
 import React from "react";
 import google from "../../images/google.png";
-import facebook from "../../images/facebook.png";
+
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ const SocialLoginPage = () => {
   if (error) {
     errorMassage = (
       <div>
-        <p className="text-danger">Error: {error.message}</p>
+        <p className="text-danger">Error: {error?.message}</p>
       </div>
     );
   }
@@ -38,11 +38,6 @@ const SocialLoginPage = () => {
         >
           <img height={50} width={50} src={google} alt="" />
           <span className="px-2">Google SignIn</span>
-        </button>
-
-        <button className="btn btn-info w-50 d-block mx-auto">
-          <img height={50} width={50} src={facebook} alt="" />
-          <span className="px-2">FaceBook</span>
         </button>
       </div>
     </div>
