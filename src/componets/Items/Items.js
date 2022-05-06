@@ -4,7 +4,7 @@ import "./Items.css";
 const Items = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("items.json")
+    fetch("http://localhost:5000/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -13,7 +13,7 @@ const Items = () => {
       <h1 className="title mt-5">Warehouse Management Items</h1>
       <div className="items-container">
         {items.map((item) => (
-          <Item key={item.id} item={item}></Item>
+          <Item key={item._id} item={item}></Item>
         ))}
       </div>
     </div>
