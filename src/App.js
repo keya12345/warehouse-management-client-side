@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./componets/About/About";
 import AddItem from "./componets/AddItem/AddItem";
 import Checkout from "./componets/Checkout/Checkout";
+import ControlItem from "./componets/ControlItem/ControlItem";
 import Home from "./componets/Home/Home";
 import ItemDetail from "./componets/ItemDetail/ItemDetail";
 import Login from "./componets/Login/Login";
@@ -43,6 +44,15 @@ function App() {
           element={
             <RequireAuth>
               <AddItem></AddItem>
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route
+          path="/controlitem"
+          element={
+            <RequireAuth>
+              <ControlItem></ControlItem>
             </RequireAuth>
           }
         ></Route>
