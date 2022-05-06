@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./componets/About/About";
+import AddItem from "./componets/AddItem/AddItem";
 import Checkout from "./componets/Checkout/Checkout";
 import Home from "./componets/Home/Home";
 import ItemDetail from "./componets/ItemDetail/ItemDetail";
@@ -33,6 +34,15 @@ function App() {
           element={
             <RequireAuth>
               <Checkout></Checkout>
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem></AddItem>
             </RequireAuth>
           }
         ></Route>
