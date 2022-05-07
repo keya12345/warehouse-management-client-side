@@ -20,7 +20,7 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <p className="text-primary fs-4 text fw-bolder">
+            <p className="text-primary fs-2 text fw-bolder">
               Electronic device means an item that operates by controlling the
               flow of electrons or other electrically charged particles in
               circuits.
@@ -36,7 +36,7 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <p className="text-dark fs-4 text fw-bolder">
+            <p className="text-dark fs-2 text fw-bolder">
               Electronics is the study of electricity (the flow of electrons)
               and how to use that to build things like computers.
             </p>
@@ -51,7 +51,7 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <p className=" mt-3 text-info fs-4 text fw-bolder">
+            <p className=" mt-3 text-primary fs-2 text fw-bolder">
               The Transistor is a semiconductor device provided with three
               terminals called base, emitter and collector.
             </p>

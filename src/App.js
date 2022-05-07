@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./componets/About/About";
 import AddItem from "./componets/AddItem/AddItem";
+import Blogs from "./componets/Blogs/Blogs";
 import Checkout from "./componets/Checkout/Checkout";
 import ControlItem from "./componets/ControlItem/ControlItem";
 import Home from "./componets/Home/Home";
@@ -31,6 +32,8 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
 
         <Route path="/register" element={<Register></Register>}></Route>
+
+        <Route path="/blog" element={<Blogs></Blogs>}></Route>
 
         <Route
           path="/checkout/:itemId"
