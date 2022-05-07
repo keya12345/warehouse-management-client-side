@@ -12,6 +12,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 import SocialLoginPage from "../SocialLoginPage/SocialLoginPage";
+import axios from "axios";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -26,7 +27,7 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
 
   if (user) {
-    navigate(from, { replace: true });
+    //navigate(from, { replace: true });
   }
   if (loading || sending) {
     return <Loading></Loading>;
@@ -40,11 +41,14 @@ const Login = () => {
     );
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
 
   const forgetPassword = async () => {

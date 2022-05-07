@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./componets/About/About";
 import AddItem from "./componets/AddItem/AddItem";
@@ -6,6 +7,7 @@ import Checkout from "./componets/Checkout/Checkout";
 import ControlItem from "./componets/ControlItem/ControlItem";
 import Home from "./componets/Home/Home";
 import ItemDetail from "./componets/ItemDetail/ItemDetail";
+import ItemOrder from "./componets/ItemOrder/ItemOrder";
 import Login from "./componets/Login/Login";
 import NotFoundPage from "./componets/NotFoundPage/NotFoundPage";
 import Register from "./componets/Register/Register";
@@ -31,7 +33,7 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
 
         <Route
-          path="/checkout"
+          path="/checkout/:itemId"
           element={
             <RequireAuth>
               <Checkout></Checkout>
@@ -57,9 +59,19 @@ function App() {
           }
         ></Route>
 
+        <Route
+          path="/order"
+          element={
+            <RequireAuth>
+              <ItemOrder></ItemOrder>
+            </RequireAuth>
+          }
+        ></Route>
+
         <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

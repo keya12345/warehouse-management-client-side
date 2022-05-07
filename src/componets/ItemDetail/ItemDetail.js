@@ -21,7 +21,7 @@ const ItemDetail = () => {
       <h3>SupplierName:{item.supplierName}</h3>
       <p>Description:{item.description}</p>
       <div className="text-center">
-        <Link to="/checkout">
+        <Link to={`/checkout/${itemId}`}>
           <button className="btn btn-primary">Checkout</button>
         </Link>
       </div>
