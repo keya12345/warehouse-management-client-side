@@ -20,11 +20,6 @@ const ItemOrder = () => {
   return (
     <div>
       <h1>Orders:{orders.length}</h1>
-      {orders.map((order) => (
-        <div>
-          <h1>Name:{order.name}</h1>
-        </div>
-      ))}
     </div>
   );
 };
