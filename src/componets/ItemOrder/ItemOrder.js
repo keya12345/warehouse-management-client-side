@@ -8,7 +8,7 @@ const ItemOrder = () => {
   const email = user.email;
 
   useEffect(() => {
-    const url = `http://localhost:5000/order?=${email}`;
+    const url = `https://shielded-harbor-12298.herokuapp.com/order?=${email}`;
     fetch(url, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

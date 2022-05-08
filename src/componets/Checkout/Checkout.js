@@ -10,7 +10,7 @@ const Checkout = () => {
   const [item, setItem] = useState({});
   const [user] = useAuthState(auth);
   useEffect(() => {
-    const url = `http://localhost:5000/item/${itemId}`;
+    const url = `https://shielded-harbor-12298.herokuapp.com/item/${itemId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -25,13 +25,15 @@ const Checkout = () => {
       address: event.target.address.value,
       phone: event.target.phone.value,
     };
-    axios.post("http://localhost:5000/order", order).then((response) => {
-      const { data } = response;
-      if (data.insertedId) {
-        toast("order accept");
-        event.target.reset();
-      }
-    });
+    axios
+      .post("https://shielded-harbor-12298.herokuapp.com/order", order)
+      .then((response) => {
+        const { data } = response;
+        if (data.insertedId) {
+          toast("order accept");
+          event.target.reset();
+        }
+      });
   };
   return (
     <div className="w-50 mx-auto">

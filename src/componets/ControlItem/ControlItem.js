@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const ControlItem = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/item")
+    fetch("https://shielded-harbor-12298.herokuapp.com/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -11,7 +11,7 @@ const ControlItem = () => {
   const deleteItem = (id) => {
     const proceed = window.confirm("are you want delete this one?");
     if (proceed) {
-      const url = `http://localhost:5000/item/${id}`;
+      const url = `https://shielded-harbor-12298.herokuapp.com/item/${id}`;
       fetch(url, {
         method: "DELETE",
       })

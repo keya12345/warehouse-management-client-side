@@ -1,6 +1,6 @@
 1. Website Name:Electronic Warehouse Management
 
-2. live link:[ https://independent-service-prov-e8dfe.web.app]
+2. live link:[ https://warehouse-management-26831.web.app]
 
 3. List of frameworks/libraries:
 
